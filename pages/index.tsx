@@ -119,6 +119,9 @@ function HomePage() {
                       onChange={function handleToggle() {
                         todoController.toggleDone({
                           id: todo.id,
+                          onError() {
+                            alert("Fala ao atualizar a TODO! :(");
+                          },
                           updateTodoOnScreen() {
                             setTodos((currentTodos) => {
                               return currentTodos.map((currentTodo) => {
