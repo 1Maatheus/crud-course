@@ -75,7 +75,7 @@ export function update(id: UUID, partialTodo: Partial<Todo>) {
   return updatedTodo;
 }
 
-function deletById(id: UUID) {
+export function deleteById(id: UUID) {
   const todos = read();
 
   const todosWithoutOne = todos.filter((todo) => {
